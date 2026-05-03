@@ -1,0 +1,128 @@
+.heroSection {
+    position: relative;
+    background-color: var(--primary-dark);
+}
+
+.heroBackground {
+    position: relative;
+    padding: 120px 24px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(26, 16, 51, 0.7), rgba(108, 63, 228, 0.8)), url('/images/hero3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.heroBtn {
+    background: var(--primary);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.heroBtn:hover {
+    background: white;
+    color: var(--primary);
+}
+
+.statsBanner {
+    background: var(--primary);
+    color: white;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.statsBanner h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.statsGrid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 32px;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.statItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.statValue {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.statValue span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.statLabel {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.statsBanner p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+
+    .statsGrid {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .statItem:not(:last-child)::after {
+        display: none;
+    }
+}

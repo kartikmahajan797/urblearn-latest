@@ -1,0 +1,111 @@
+.courseHero {
+    padding: 120px 0 60px;
+    background: var(--bg-light);
+}
+
+.heroCard {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+}
+
+.heroContent h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.heroContent p {
+    font-size: 1.05rem;
+    color: var(--text-medium);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.statsRow {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    padding: 24px 0;
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statValue {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+    margin-top: 4px;
+}
+
+.heroActions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btnStart {
+    background: var(--primary);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btnStart:hover {
+    background: var(--primary-dark);
+}
+
+.termsLink {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+    text-decoration: underline;
+}
+
+.heroImage {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #f472b6;
+    /* pinkish background for the image */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.heroImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+@media (max-width: 768px) {
+    .heroCard {
+        grid-template-columns: 1fr;
+        padding: 32px;
+    }
+}

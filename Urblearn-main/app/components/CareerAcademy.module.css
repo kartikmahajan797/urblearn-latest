@@ -1,0 +1,66 @@
+.academySection {
+    padding: 120px 0;
+    background: white;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.imageCol {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.textCol h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    color: var(--text-dark);
+}
+
+.textCol p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: var(--text-medium);
+}
+
+.exploreBtn {
+    background: var(--primary);
+    color: white;
+    padding: 16px 36px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
+}
+
+.exploreBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(138, 43, 226, 0.3);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

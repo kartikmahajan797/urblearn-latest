@@ -1,0 +1,146 @@
+.problemSection {
+    padding: 100px 20px;
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+}
+
+.comparisonGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-light);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.cardHeader h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.list li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.5rem;
+}
+
+.list strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: var(--text-dark);
+}
+
+.list p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.5;
+}
+
+.problemCard {
+    background: #fffafa;
+    border-color: #ffe0e0;
+}
+
+.problemCard .icon {
+    background: #ffe5e5;
+    color: #e53935;
+}
+
+.problemCard .cardHeader h3 {
+    color: #d32f2f;
+}
+
+.problemCard .list li::before {
+    color: #e53935;
+}
+
+.solutionCard {
+    background: #f8f6ff;
+    border-color: #e4dbff;
+}
+
+.solutionCard .icon {
+    background: #efe9ff;
+    color: var(--primary);
+}
+
+.solutionCard .cardHeader h3 {
+    color: var(--primary);
+}
+
+.solutionCard .list li::before {
+    color: var(--primary);
+}
+
+@media (max-width: 900px) {
+    .comparisonGrid {
+        grid-template-columns: 1fr;
+    }
+}

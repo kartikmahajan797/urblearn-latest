@@ -1,0 +1,139 @@
+.highlights {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #6C3FE4 0%, #5B2FD4 50%, #4A20C4 100%);
+}
+
+.highlightsContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.highlightsTitle {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.highlightsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.weeksColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weekCard {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    position: relative;
+    border-left: 5px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.weekCard:hover {
+    transform: translateX(8px);
+    background: #ffffff;
+}
+
+.activeCard {
+    background: #ffffff;
+    border-left-color: var(--primary);
+    transform: translateX(12px) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.weekBadge {
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.weekTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 4px;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    min-height: 380px; 
+}
+
+.contentCard {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+.contentTitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.contentList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contentItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.05rem;
+    color: var(--text-medium);
+    font-weight: 500;
+}
+
+.contentNumber {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .highlightsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .weekCard:hover, .activeCard {
+        transform: translateX(0) !important;
+    }
+
+    .rightColumn {
+        min-height: auto;
+    }
+}

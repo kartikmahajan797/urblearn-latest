@@ -1,0 +1,180 @@
+.section {
+    padding: 80px 0;
+    background: var(--bg-white);
+}
+
+.comparisonTable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    font-family: inherit;
+    position: relative;
+}
+
+/* Feature Column */
+.featureCol {
+    background-color: #F4F9FD; /* very light blue/gray */
+    border-radius: 24px 0 0 24px;
+    padding: 40px 20px 40px 40px;
+    flex: 1;
+    z-index: 1;
+}
+
+.headerSpace {
+    height: 60px; /* Spacer for headers in other cols */
+    margin-bottom: 20px;
+}
+
+.rowFeature {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.arrow {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Urblearn Column */
+.urblearnCol {
+    background-color: #1a1a2e; /* dark sleek background matching theme dark tones */
+    border-radius: 24px;
+    padding: 40px 30px;
+    flex: 1.25;
+    z-index: 2;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    margin: -30px -10px; /* Make it pop out vertically and slightly overlap sides */
+    position: relative;
+    color: white;
+}
+
+.headerUrb {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    justify-content: center;
+    color: white;
+}
+
+.logoIcon {
+    color: var(--primary-yellow, #FFD700);
+    margin-right: 8px;
+    font-size: 2rem;
+}
+
+.rowUrb {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    gap: 12px;
+}
+
+.rowUrb:last-child {
+    border-bottom: none;
+}
+
+.checkIcon {
+    color: #FF9500; /* Orange/Yellow checkmark */
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowUrb p {
+    line-height: 1.3;
+}
+
+.subText {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: 400;
+}
+
+/* Others Column */
+.othersCol {
+    background-color: #EDEDED; /* light gray */
+    border-radius: 0 24px 24px 0;
+    padding: 40px 40px 40px 20px;
+    flex: 1;
+    z-index: 1;
+}
+
+.headerOthers {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.rowOthers {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #444;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    gap: 12px;
+    padding-left: 10px;
+}
+
+.rowOthers:last-child {
+    border-bottom: none;
+}
+
+.crossIcon {
+    color: #aaa;
+    font-size: 1rem;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.rowOthers .subText {
+    color: #777;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .comparisonTable {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .featureCol {
+        display: none; /* Hide feature column on mobile, make UI simpler */
+    }
+    
+    .urblearnCol {
+        margin: 0 0 20px 0;
+        border-radius: 20px;
+    }
+    
+    .othersCol {
+        border-radius: 20px;
+    }
+}

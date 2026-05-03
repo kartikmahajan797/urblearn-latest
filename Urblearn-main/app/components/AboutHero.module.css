@@ -1,0 +1,132 @@
+.heroSection {
+    position: relative;
+    padding: 120px 20px 80px;
+    background-color: #fff;
+    color: var(--text-dark);
+    text-align: center;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(108, 63, 228, 0.1);
+    border: 1px solid rgba(108, 63, 228, 0.2);
+    color: var(--primary);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+}
+
+.title span {
+    color: var(--primary);
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-medium);
+    max-width: 850px;
+    margin: 0 auto 60px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.statBox {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    padding: 40px;
+    border-radius: 24px;
+    min-width: 250px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.statBox:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.statBox h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.statBox p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.glowOrb1 {
+    position: absolute;
+    top: -150px;
+    left: -150px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(108, 63, 228, 0.1) 0%, rgba(108, 63, 228, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(80px);
+}
+
+.glowOrb2 {
+    position: absolute;
+    bottom: -200px;
+    right: -150px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(108, 63, 228, 0.08) 0%, rgba(108, 63, 228, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(100px);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.8rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .statBox {
+        width: 100%;
+    }
+}

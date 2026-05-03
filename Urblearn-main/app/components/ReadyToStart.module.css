@@ -1,0 +1,76 @@
+.readyToStart {
+    padding: 80px 0;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.purpleCard {
+    background: var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.purpleCard h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 32px;
+}
+
+.purpleCard span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+}
+
+.btnAdviser {
+    background: white;
+    color: var(--primary);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btnAdviser:hover {
+    background: var(--bg-light);
+}
+
+.imageCard {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #f472b6;
+    position: relative;
+    min-height: 400px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

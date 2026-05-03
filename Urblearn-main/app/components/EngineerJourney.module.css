@@ -1,0 +1,206 @@
+.journeySection {
+    padding: 100px 0;
+    background-color: var(--primary, #6C3FE4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background decorations */
+.bgDecoration1 {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bgDecoration2 {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0,0,0,0) 60%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.header {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 60px;
+}
+
+.header h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+}
+
+.header h2 span {
+    color: #FFDE59;
+}
+
+.header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cardsFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Cards will be equal height */
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.phaseCard {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 36px 28px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.5); /* subtle edge */
+}
+
+.phaseCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* perfectly center icon and number */
+    margin-bottom: 30px;
+}
+
+.iconBox {
+    font-size: 2.5rem;
+    line-height: 1;
+    background: #F8F9FA;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.hugeNumber {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(108, 63, 228, 0.12); /* distinct but clean watermark */
+    font-family: 'Inter', sans-serif;
+}
+
+.phaseCard:hover .hugeNumber {
+    color: rgba(108, 63, 228, 0.25);
+}
+
+.cardBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.badge {
+    display: inline-block;
+    background: #F4F0FF;
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.phaseCard:hover .badge {
+    background: var(--primary);
+    color: #fff;
+}
+
+.cardBody h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.cardBody p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Redesigned simple, beautiful arrows */
+.arrowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    flex-shrink: 0;
+}
+
+.arrowIcon {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.4);
+    animation: arrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0% { transform: translateX(-5px); color: rgba(255, 255, 255, 0.4); }
+    50% { transform: translateX(5px); color: rgba(255, 255, 255, 0.9); }
+    100% { transform: translateX(-5px); color: rgba(255, 255, 255, 0.4); }
+}
+
+@media (max-width: 1024px) {
+    .cardsFlex {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .phaseCard {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .arrowContainer {
+        width: 100%;
+        height: 40px;
+    }
+
+    .arrowIcon {
+        transform: rotate(90deg);
+        animation: none; /* simple display on mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .header h2 {
+        font-size: 2.2rem;
+    }
+}

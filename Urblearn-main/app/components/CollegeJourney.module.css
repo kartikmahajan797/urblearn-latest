@@ -1,0 +1,94 @@
+.journeySection {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.header h2 span {
+    color: var(--primary);
+}
+
+.header p {
+    color: var(--text-medium);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stepsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    gap: 32px;
+}
+
+.stepCard {
+    background: var(--bg-white);
+    padding: 32px 24px;
+    border-radius: 16px;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.stepCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+.stepIcon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.stepNumber {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.stepTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.stepDesc {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .stepsWrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

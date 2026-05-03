@@ -1,0 +1,122 @@
+.section {
+    padding: 80px 0;
+    background-color: var(--bg-section);
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: var(--radius-xl);
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-light);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.content {
+    padding: 24px;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-top: auto;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    opacity: 0.9;
+}
+
+.card h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Customizing the cards to match the EXACT vibrant colors from the screenshot */
+.blue { background-color: #38bdf8; border: none; }
+.orange { background-color: #fbba00; border: none; }
+.green { background-color: #10b981; border: none; }
+.purple { background-color: #8b5cf6; border: none; }
+.yellow { background-color: #fcd34d; border: none; }
+.red { background-color: #ef4444; border: none; }
+.pink { background-color: #f43f5e; border: none; }
+.light { background-color: #fed7aa; border: none; }
+
+/* The View All card needs dark text over the light peach backgroud */
+.light h3, .light p {
+    color: var(--text-dark);
+}
+
+.imageOverlay {
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    width: 70%;
+    height: 85%;
+    z-index: 1;
+}
+
+.placeholderImg {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/hero1.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
+    opacity: 0.8;
+    mix-blend-mode: luminosity;
+    border-radius: 20px 0 0 20px;
+    filter: contrast(1.2);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
