@@ -1,76 +1,50 @@
-import Image from 'next/image';
+'use client';
+import { motion } from 'framer-motion';
+import { FaLinkedin, FaTwitter, FaLink } from 'react-icons/fa';
 import styles from './Instructors.module.css';
 
 const tutors = [
-    { 
-        name: 'Ayush', 
-        rating: '5.0',
-        ratingCount: '2105',
+    {
+        name: 'Ayush',
         experience: '5',
-        subjects: 'MERN Stack, Next.js, React, Node.js',
-        location: 'India',
-        flag: '🇮🇳',
-        desc: 'Full-stack software engineer and expert educator specializing in the MERN stack and modern web...',
+        company: 'Ex-Amazon',
         img: '/images/ayush.jpg',
-        bgColor: '#6C63FF',
         bgPosition: 'center 35%',
-        blendMode: 'normal'
+        linkedin: '#',
+        twitter: '#',
+        portfolio: '#'
     },
-    { 
-        name: 'Sagar Malhotra', 
-        rating: '4.9',
-        ratingCount: '1840',
+    {
+        name: 'Sagar Malhotra',
         experience: '4',
-        subjects: 'Android Development, Kotlin, Jetpack Compose',
-        location: 'India',
-        flag: '🇮🇳',
-        desc: 'Passionate Android developer and educator. Building scalable mobile applications and teaching modern...',
+        company: 'Android Lead',
         img: '/images/sagar.png',
-        bgColor: '#2ecc71',
         bgPosition: 'center 20%',
-        blendMode: 'normal'
+        linkedin: '#',
+        twitter: '#',
+        portfolio: '#'
     },
-    { 
-        name: 'Chennaveer Jogur', 
-        rating: '4.8',
-        ratingCount: '1350',
+    {
+        name: 'Chennaveer Jogur',
         experience: '6',
-        subjects: 'Data Science, Generative AI, Machine Learning',
-        location: 'India',
-        flag: '🇮🇳',
-        desc: 'Specialist in Data Science and Generative AI. Helping students master machine learning, neural networks, and building real-world AI applications...',
+        company: 'AI Research Lead',
         img: '/images/chennaveer.png',
-        bgColor: '#f39c12',
         bgPosition: 'center 30%',
-        blendMode: 'normal'
+        linkedin: '#',
+        twitter: '#',
+        portfolio: '#'
     },
-    { 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e0f42c2 (Updated project)
-        name: 'Shruti Grover', 
-        rating: '4.9',
-        ratingCount: '1540',
+    {
+
+        name: 'Shruti Grover',
         experience: '6',
-        subjects: 'Full Stack Development, Java, Spring Boot, React',
-        location: 'India',
-        flag: '🇮🇳',
-        desc: 'Senior Full Stack Engineer and mentor. Expert in building enterprise-grade applications and guiding students through the complexities of modern web development...',
+        company: 'Microsoft',
         img: '/images/shruti.jpg',
-        bgColor: '#e84393',
         bgPosition: 'center 15%',
         blendMode: 'normal'
     },
-    { 
-<<<<<<< HEAD
-=======
->>>>>>> 592dd1a (Fix Vercel: Moved Next.js files to root directory)
-=======
->>>>>>> 0b86a78 (Updated project)
->>>>>>> e0f42c2 (Updated project)
-        name: 'Fella Rahmah Putri', 
+    {
+        name: 'Fella Rahmah Putri',
         rating: '5.0',
         ratingCount: '748',
         experience: '4',
@@ -81,8 +55,8 @@ const tutors = [
         img: '/images/hero1.jpg',
         bgColor: '#b2a7eb'
     },
-    { 
-        name: 'Benard Santoso', 
+    {
+        name: 'Benard Santoso',
         rating: '5.0',
         ratingCount: '7176',
         experience: '3',
@@ -93,8 +67,8 @@ const tutors = [
         img: '/images/hero2.jpg',
         bgColor: '#35e2df'
     },
-    { 
-        name: 'Ola Abo Elsaadat', 
+    {
+        name: 'Ola Abo Elsaadat',
         rating: '5.0',
         ratingCount: '1271',
         experience: '4',
@@ -105,8 +79,8 @@ const tutors = [
         img: '/images/hero3.jpg',
         bgColor: '#f38b88'
     },
-    { 
-        name: 'Jaya Kapoor', 
+    {
+        name: 'Jaya Kapoor',
         rating: '5.0',
         ratingCount: '1254',
         experience: '3',
@@ -123,63 +97,68 @@ export default function Instructors() {
     return (
         <section className={styles.instructors}>
             <div className={styles.container}>
-                <h2 className="section-title">Our Educators</h2>
-                
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className={styles.headerArea}
+                >
+                    <span className={styles.topTag}>Industry Experts</span>
+                    <h2 className={styles.title}>Meet Your <span>Educators</span></h2>
+                    <p className={styles.subtitle}>Learn from mentors who have actually built what they teach.</p>
+                </motion.div>
+
                 <div className={styles.grid}>
                     {tutors.map((tutor, i) => (
-                        <div key={i} className={styles.card}>
-                            <div className={styles.header} style={{ backgroundColor: tutor.bgColor }}>
-                                <div 
-                                    className={styles.imageOverlay} 
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: i * 0.1 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -10 }}
+                            className={styles.card}
+                        >
+                            <div className={styles.imageWrapper}>
+                                <div
+                                    className={styles.instructorImg}
                                     style={{
                                         backgroundImage: `url(${tutor.img})`,
                                         backgroundPosition: tutor.bgPosition || 'top center',
-                                        mixBlendMode: tutor.blendMode || 'multiply'
                                     }}
                                 ></div>
-                                <button className={styles.playBtn}>
-                                    <span className={styles.playIcon}>▶</span>
-                                </button>
-                            </div>
-                            
-                            <div className={styles.content}>
-                                <h3 className={styles.name}>{tutor.name}</h3>
-                                <div className={styles.ratingRow}>
-                                    <span className={styles.star}>⭐</span>
-                                    <span className={styles.ratingScore}>{tutor.rating}</span>
-                                    <span className={styles.ratingCount}>({tutor.ratingCount} ratings)</span>
-                                </div>
-                                
-                                <div className={styles.divider}></div>
-                                
-                                <div className={styles.infoRow}>
-                                    <span className={styles.icon}>💼</span>
-                                    <span className={styles.textLabel}>Experience: <strong>{tutor.experience} years</strong></span>
-                                </div>
-                                
-                                <div className={styles.infoRow}>
-                                    <span className={styles.icon}>📝</span>
-                                    <span className={styles.textLabel}>{tutor.subjects}</span>
-                                </div>
-                                
-                                <div className={styles.locationRow}>
-                                    <span className={styles.flagIcon}>{tutor.flag}</span>
-                                    <div className={styles.locText}>
-                                        <span className={styles.locLabel}>Location</span>
-                                        <span className={styles.locValue}>{tutor.location}</span>
+                                <div className={styles.socialOverlay}>
+                                    <div className={styles.socialIcons}>
+                                        <a href={tutor.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaLinkedin /></a>
+                                        <a href={tutor.twitter} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaTwitter /></a>
+                                        <a href={tutor.portfolio} target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FaLink /></a>
                                     </div>
                                 </div>
-                                
-                                <p className={styles.desc}>
-                                    {tutor.desc} <span className={styles.readMore}>Read More</span>
-                                </p>
-                                
-                                <button className={styles.demoBtn}>Book a Free Demo Class</button>
                             </div>
-                        </div>
+
+                            <div className={styles.content}>
+                                <h3 className={styles.name}>{tutor.name}</h3>
+                                <div className={styles.tags}>
+                                    <motion.span
+                                        whileHover={{ scale: 1.05 }}
+                                        className={styles.tagExp}
+                                    >
+                                        💼 {tutor.experience} Years Exp
+                                    </motion.span>
+                                    <motion.span
+                                        whileHover={{ scale: 1.05 }}
+                                        className={styles.tagCompany}
+                                    >
+                                        🏢 {tutor.company}
+                                    </motion.span>
+                                </div>
+                            </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
         </section>
     );
 }
+
+
