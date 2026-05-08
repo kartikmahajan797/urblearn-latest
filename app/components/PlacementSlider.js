@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef, useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useRef, useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence, useAnimation } from 'framer-motion';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import styles from './PlacementSlider.module.css';
 
 const placements = [
@@ -59,15 +60,20 @@ const placements = [
 
 export default function PlacementSlider() {
     const [carouselWidth, setCarouselWidth] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const carouselRef = useRef(null);
     const [selectedId, setSelectedId] = useState(null);
+    const controls = useAnimation();
+
+    // Card width + gap
+    const CARD_WIDTH = 320; // 300px width + 20px gap
 
     useEffect(() => {
         if (carouselRef.current) {
             setCarouselWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
         }
         
-        // Recalculate on resize
         const handleResize = () => {
             if (carouselRef.current) {
                 setCarouselWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
@@ -76,6 +82,30 @@ export default function PlacementSlider() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    const scrollTo = useCallback((index) => {
+        const x = -index * CARD_WIDTH;
+        const clampedX = Math.max(-carouselWidth, Math.min(0, x));
+        controls.start({ x: clampedX, transition: { type: "spring", stiffness: 300, damping: 30 } });
+        setCurrentIndex(index);
+    }, [carouselWidth, controls]);
+
+    const nextSlide = useCallback(() => {
+        const nextIndex = (currentIndex + 1) % placements.length;
+        scrollTo(nextIndex);
+    }, [currentIndex, scrollTo]);
+
+    const prevSlide = useCallback(() => {
+        const prevIndex = (currentIndex - 1 + placements.length) % placements.length;
+        scrollTo(prevIndex);
+    }, [currentIndex, scrollTo]);
+
+    // Auto-play
+    useEffect(() => {
+        if (!isAutoPlaying || selectedId) return;
+        const interval = setInterval(nextSlide, 4000);
+        return () => clearInterval(interval);
+    }, [isAutoPlaying, nextSlide, selectedId]);
 
     // Get the selected intern data
     const selectedIntern = selectedId ? placements.find(p => p.id === selectedId) : null;
@@ -110,10 +140,22 @@ export default function PlacementSlider() {
                 >
                     <span className={styles.sectionTag}>✨ Success Stories</span>
                     <h2>Students <span>Success Stories</span></h2>
-                    <p>Meet our students who transformed their careers, won national hackathons, and landed dream roles. Drag to explore or click to read their story.</p>
+                    <p>Meet our students who transformed their careers, won national hackathons, and landed dream roles.</p>
                 </motion.div>
 
-                <div className={styles.sliderWrapper}>
+                <div 
+                    className={styles.sliderWrapper}
+                    onMouseEnter={() => setIsAutoPlaying(false)}
+                    onMouseLeave={() => setIsAutoPlaying(true)}
+                >
+                    {/* Navigation Arrows */}
+                    <button className={`${styles.navBtn} ${styles.prevBtn}`} onClick={prevSlide} aria-label="Previous slide">
+                        <FiChevronLeft />
+                    </button>
+                    <button className={`${styles.navBtn} ${styles.nextBtn}`} onClick={nextSlide} aria-label="Next slide">
+                        <FiChevronRight />
+                    </button>
+
                     <motion.div 
                         ref={carouselRef} 
                         className={styles.carouselContainer}
@@ -122,15 +164,23 @@ export default function PlacementSlider() {
                         <motion.div 
                             drag="x"
                             dragConstraints={{ right: 0, left: -carouselWidth }}
+                            animate={controls}
                             className={styles.sliderTrack}
                             dragElastic={0.2}
                             dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                            onDragEnd={(e, info) => {
+                                // Update current index based on drag position
+                                const x = info.point.x; // This is absolute, we need relative to start
+                                // Simplified: just let it drag freely or snap
+                                const currentX = info.offset.x;
+                                // We could calculate index here, but spring animation handles it better
+                            }}
                         >
-                            {placements.map((intern) => (
+                            {placements.map((intern, index) => (
                                 <motion.div
                                     key={intern.id}
                                     layoutId={`card-${intern.id}`}
-                                    className={styles.slideItem}
+                                    className={`${styles.slideItem} ${currentIndex === index ? styles.activeItem : ''}`}
                                     onClick={() => setSelectedId(intern.id)}
                                     style={{ '--card-accent': intern.color }}
                                     whileHover={{ 
@@ -174,6 +224,19 @@ export default function PlacementSlider() {
                             ))}
                         </motion.div>
                     </motion.div>
+
+                    {/* Pagination Dots */}
+                    <div className={styles.dotsContainer}>
+                        {placements.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ''}`}
+                                onClick={() => scrollTo(index)}
+                                aria-label={`Go to slide ${index + 1}`}
+                                style={{ backgroundColor: currentIndex === index ? placements[index].color : '#cbd5e1' }}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
 

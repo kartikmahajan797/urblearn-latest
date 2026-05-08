@@ -2,9 +2,9 @@ import Image from 'next/image';
 import styles from './StudentFeedback.module.css';
 
 const feedbacks = [
-    { name: 'Rahul Verma', img: 'https://i.pravatar.cc/150?u=rahul', text: '"The Full Stack course completely changed my career. The hands-on project approach and expert guidance during 1:1 sessions made all the difference."' },
-    { name: 'Ananya Gupta', img: 'https://i.pravatar.cc/150?u=ananya', text: '"I landed my dream job within 2 months of completing the Gen AI program. The portfolio I built during the capstone was the key factor."' },
-    { name: 'Vikram Singh', img: 'https://i.pravatar.cc/150?u=vikram', text: '"Urblearn\'s instructors helped me master System Design concepts I previously struggled with. It directly enabled me to crack my Amazon interview."' },
+    { name: 'Riya Sharma', img: '/images/students/kid_f1.png', text: '"I never knew coding could be this much fun! I built my first game in just two weeks. The mentors are so patient and help me whenever I get stuck."' },
+    { name: 'Arjun Mehra', img: '/images/students/kid_f2.png', text: '"I made a website for my pet dog! Urblearn is the best place for young creators. Now I can show my friends what I built during the summer break."' },
+    { name: 'Isha Patel', img: '/images/students/kid_f3.png', text: '"The 1:1 sessions helped me understand how robots think. I love building logic and seeing it come to life. Learning here feels like playing a game!"' },
 ];
 
 export default function StudentFeedback() {

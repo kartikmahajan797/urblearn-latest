@@ -24,7 +24,6 @@ export default function CourseTestimonials() {
                                     <h4>{student.name}</h4>
                                     <p>{student.role}</p>
                                 </div>
-                                <div className={styles.playBtn}>▶</div>
                             </div>
                         </div>
                     ))}

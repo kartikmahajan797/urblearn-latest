@@ -9,7 +9,6 @@ export default function FeatureHighlight() {
                 <div className={styles.grid}>
                     <div className={styles.imageCol} style={{ position: 'relative', overflow: 'hidden', borderRadius: '16px' }}>
                         <Image src="/images/hero3.jpg" alt="AI Tutorial Video" fill style={{ objectFit: 'cover' }} />
-                        <div className={styles.playBtn}>▶</div>
                     </div>
                     <div className={styles.contentCol}>
                         <div className={styles.list}>

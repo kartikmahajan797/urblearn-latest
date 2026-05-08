@@ -7,7 +7,6 @@ export default function Experience() {
             <div className={styles.experienceContainer}>
                 <div className={styles.experienceVideo}>
                     <Image src="/images/hero2.jpg" alt="Experience learning" width={500} height={350} style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '16px' }} />
-                    <div className={styles.playBtn}>▶</div>
                 </div>
                 <div className={styles.experienceContent}>
                     <h2>Experience Learning<br /><span>Before Committing</span></h2>

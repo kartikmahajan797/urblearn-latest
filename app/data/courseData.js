@@ -92,6 +92,15 @@ const courseData = {
             { icon: '💼', text: 'Placement Assistance & Interview Prep' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Ayush Patel',
+            role: 'Senior Full Stack Engineer',
+            experience: '5+ Years',
+            company: 'Ex-Amazon, AI Architect',
+            img: '/images/ayush.jpg',
+            bio: 'Ayush is a veteran software engineer specializing in Gen AI and Full Stack development. He has architected scalable systems for global companies and is passionate about mentoring the next generation of builders.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'generative-ai': {
@@ -177,6 +186,15 @@ const courseData = {
             { icon: '🧠', text: 'Access to GPU Resources for Training' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Chennaveer Jogur',
+            role: 'AI & Data Science Specialist',
+            experience: '6+ Years',
+            company: 'AI Research Lead',
+            img: '/images/chennaveer.png',
+            bio: 'Chennaveer is an expert in Generative AI and Machine Learning. He has led multiple AI research projects and has a deep understanding of LLMs, RAG pipelines, and AI agent architectures.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'backend-development': {
@@ -262,6 +280,15 @@ const courseData = {
             { icon: '🚀', text: 'Deploy to Cloud — AWS & Railway' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Shruti Grover',
+            role: 'Senior Backend Engineer',
+            experience: '6+ Years',
+            company: 'Enterprise Java Expert',
+            img: '/images/shruti.jpg',
+            bio: 'Shruti is an expert in building enterprise-grade backend systems. With years of experience in Java, Spring Boot, and Node.js, she guides students through the complexities of scalable server-side architecture.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'system-design': {
@@ -337,6 +364,15 @@ const courseData = {
             { icon: '💼', text: 'FAANG Interview Preparation' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Ayush Patel',
+            role: 'System Architect',
+            experience: '7+ Years',
+            company: 'Infrastructure Lead',
+            img: '/images/ayush.jpg',
+            bio: 'Ayush has designed and scaled systems that handle millions of requests per second. He brings deep industry knowledge of distributed systems and high-availability architecture to this course.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'mern-stack': {
@@ -422,6 +458,15 @@ const courseData = {
             { icon: '💼', text: 'Job Assistance & Portfolio Review' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Ayush Patel',
+            role: 'Full Stack Developer',
+            experience: '5+ Years',
+            company: 'MERN Expert',
+            img: '/images/ayush.jpg',
+            bio: 'Ayush is a master of the MERN stack. He focuses on building production-ready applications and teaching students the best practices of modern web development using JavaScript and React.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'java-full-stack': {
@@ -517,6 +562,15 @@ const courseData = {
             { icon: '💼', text: 'Placement Support & Interview Prep' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Shruti Grover',
+            role: 'Senior Java Architect',
+            experience: '6+ Years',
+            company: 'Enterprise Solutions Expert',
+            img: '/images/shruti.jpg',
+            bio: 'Shruti specializes in building robust enterprise applications using Java and Spring Boot. She has helped hundreds of students transition into corporate roles with her deep technical expertise.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'data-structures-algorithms': {
@@ -602,6 +656,15 @@ const courseData = {
             { icon: '🏆', text: 'Weekly Coding Contests' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'David Chen',
+            role: 'Algorithms & DS Specialist',
+            experience: '5+ Years',
+            company: 'Competitive Programmer',
+            img: 'https://i.pravatar.cc/300?u=davidchen',
+            bio: 'David is a competitive programming veteran who has cracked interviews at major tech firms. He focuses on building a strong problem-solving intuition and mastering complex data structures.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'data-science': {
@@ -687,6 +750,15 @@ const courseData = {
             { icon: '💼', text: 'Placement Assistance & Resume Review' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Chennaveer Jogur',
+            role: 'Senior Data Scientist',
+            experience: '6+ Years',
+            company: 'Data Insights Lead',
+            img: '/images/chennaveer.png',
+            bio: 'Chennaveer is a data science veteran with a deep passion for unlocking insights from complex datasets. He has helped numerous companies leverage data to drive growth and innovation.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'data-analytics': {
@@ -762,6 +834,15 @@ const courseData = {
             { icon: '💼', text: 'Job Assistance & Interview Prep' },
             { icon: '♾️', text: 'Lifetime Access to Course Materials' },
         ],
+        mentor: {
+            name: 'Chennaveer Jogur',
+            role: 'Data Analytics Expert',
+            experience: '5+ Years',
+            company: 'BI Solutions Architect',
+            img: '/images/chennaveer.png',
+            bio: 'Chennaveer is an expert in Business Intelligence and Data Analytics. He teaches students how to transform raw data into actionable stories that drive business success.',
+            contact: 'https://wa.me/919999999999'
+        }
     },
 
     'mathematics-for-tech': {

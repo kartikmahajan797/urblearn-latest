@@ -212,6 +212,44 @@ export default function CourseDetail({ course }) {
                     </div>
                 </div>
             </section>
+            
+            {/* ===== MENTOR SECTION ===== */}
+            {course.mentor && (
+                <section className={styles.mentorSection}>
+                    <div className={styles.mentorInner}>
+                        <div className={styles.mentorHeader}>
+                            <h2>About Your <span>Mentor</span></h2>
+                            <p>Learn from industry veterans who have built systems for millions of users.</p>
+                        </div>
+                        <div className={styles.mentorCard}>
+                            <div className={styles.mentorImgWrapper}>
+                                <img src={course.mentor.img} alt={course.mentor.name} className={styles.mentorImg} />
+                                <div className={styles.mentorBadge}>Expert Mentor</div>
+                            </div>
+                            <div className={styles.mentorInfo}>
+                                <div className={styles.mentorMainInfo}>
+                                    <h3>{course.mentor.name}</h3>
+                                    <p className={styles.mentorRole}>{course.mentor.role} @ <span>{course.mentor.company}</span></p>
+                                    <div className={styles.mentorStats}>
+                                        <span>💼 {course.mentor.experience} Experience</span>
+                                        <span>🎓 Top Rated Educator</span>
+                                    </div>
+                                </div>
+                                <p className={styles.mentorBio}>{course.mentor.bio}</p>
+                                <div className={styles.mentorActions}>
+                                    <a href={course.mentor.contact} target="_blank" rel="noopener noreferrer" className={styles.contactBtn}>
+                                        💬 Contact Mentor
+                                    </a>
+                                    <div className={styles.mentorSocials}>
+                                        <a href="#" className={styles.socialLink}>in</a>
+                                        <a href="#" className={styles.socialLink}>𝕏</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* ===== KEY FEATURES ===== */}
             <section className={styles.features}>

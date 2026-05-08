@@ -3,6 +3,7 @@ import AboutHero from '../components/AboutHero';
 import ProblemSolved from '../components/ProblemSolved';
 import FounderVision from '../components/FounderVision';
 import TeamGrid from '../components/TeamGrid';
+import OurJourney from '../components/OurJourney';
 import Footer from '../components/Footer';
 
 export const metadata = {
@@ -17,8 +18,10 @@ export default function AboutPage() {
             <AboutHero />
             <ProblemSolved />
             <FounderVision />
-            <TeamGrid />
+            {/* <TeamGrid /> */}
+            <OurJourney />
             <Footer />
         </main>
     );
 }
+

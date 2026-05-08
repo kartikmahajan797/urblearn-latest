@@ -2,9 +2,9 @@ import Image from 'next/image';
 import styles from './AmazingStudents.module.css';
 
 const students = [
-    { name: 'Sasha Hayes', date: '12.06.2023', img: 'https://i.pravatar.cc/300?u=sasha' },
-    { name: 'David Smith', date: '15.08.2023', img: 'https://i.pravatar.cc/300?u=david' },
-    { name: 'Emily Grace', date: '02.11.2023', img: 'https://i.pravatar.cc/300?u=emily' },
+    { name: 'Kabir Sharma', date: '12.01.2024', img: '/images/students/kid1.png' },
+    { name: 'Sara Khan', date: '15.02.2024', img: '/images/students/kid2.png' },
+    { name: 'Aryan Verma', date: '02.03.2024', img: '/images/students/kid3.png' },
 ];
 
 export default function AmazingStudents() {
