@@ -46,6 +46,10 @@ const tutors = [
     },
     { 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e0f42c2 (Updated project)
         name: 'Shruti Grover', 
         rating: '4.9',
         ratingCount: '1540',
@@ -60,8 +64,12 @@ const tutors = [
         blendMode: 'normal'
     },
     { 
+<<<<<<< HEAD
 =======
 >>>>>>> 592dd1a (Fix Vercel: Moved Next.js files to root directory)
+=======
+>>>>>>> 0b86a78 (Updated project)
+>>>>>>> e0f42c2 (Updated project)
         name: 'Fella Rahmah Putri', 
         rating: '5.0',
         ratingCount: '748',
