@@ -2,9 +2,9 @@ import Image from 'next/image';
 import styles from './StudentFeedback.module.css';
 
 const feedbacks = [
-    { name: 'Riya Sharma', img: '/images/students/kid_f1.png', text: '"I never knew coding could be this much fun! I built my first game in just two weeks. The mentors are so patient and help me whenever I get stuck."' },
-    { name: 'Arjun Mehra', img: '/images/students/kid_f2.png', text: '"I made a website for my pet dog! Urblearn is the best place for young creators. Now I can show my friends what I built during the summer break."' },
-    { name: 'Isha Patel', img: '/images/students/kid_f3.png', text: '"The 1:1 sessions helped me understand how robots think. I love building logic and seeing it come to life. Learning here feels like playing a game!"' },
+    { name: 'Kunal Singhi', img: '/images/student2.jpeg', text: '"The advanced curriculum at Urblearn helped me scale my projects to thousands of stars. It transformed my passion into real-world impact."', objectPosition: 'top center' },
+    { name: 'Ayush Patel', img: '/images/student1.jpeg', text: '"Contributing to major open-source repositories was a dream. Urblearn provided the mentorship I needed to become a core contributor."', objectPosition: 'top center' },
+    { name: 'Vaibhav', img: '/images/student4.jpeg', text: '"The deep dive into AI and ML paved the way for my placement. I now work on cutting-edge products that impact millions of users."' },
 ];
 
 export default function StudentFeedback() {
@@ -16,7 +16,18 @@ export default function StudentFeedback() {
                     {feedbacks.map((item, i) => (
                         <div key={i} className={styles.card}>
                             <div className={styles.avatar}>
-                                <Image src={item.img} alt={item.name} width={64} height={64} unoptimized style={{ borderRadius: '50%', objectFit: 'cover' }} />
+                                <Image 
+                                    src={item.img} 
+                                    alt={item.name} 
+                                    width={64} 
+                                    height={64} 
+                                    unoptimized 
+                                    style={{ 
+                                        borderRadius: '50%', 
+                                        objectFit: 'cover',
+                                        objectPosition: item.objectPosition || 'center' 
+                                    }} 
+                                />
                             </div>
                             <h4 className={styles.name}>{item.name}</h4>
                             <p className={styles.review}>{item.text}</p>

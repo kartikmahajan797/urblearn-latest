@@ -20,7 +20,7 @@ const courses = [
         originalPrice: '12,999',
         perClass: '150',
         category: 'development',
-        image: '/images/course1.jpg',
+        image: '/images/course_ai.png',
         curriculum: ['HTML, CSS & JS Foundations', 'React & Next.js', 'Node.js & Express APIs', 'Gen AI Integration', 'Deployment & DevOps']
     },
     {
@@ -37,7 +37,7 @@ const courses = [
         originalPrice: '9,999',
         perClass: '120',
         category: 'ai',
-        image: '/images/course2.jpg',
+        image: '/images/course_genai.png',
         curriculum: ['LLM Fundamentals', 'Prompt Engineering', 'RAG Pipelines', 'Fine-Tuning Models', 'AI App Deployment']
     },
     {
@@ -54,7 +54,7 @@ const courses = [
         originalPrice: null,
         perClass: '100',
         category: 'development',
-        image: '/images/course3.jpg',
+        image: '/images/course_backend.png',
         curriculum: ['Node.js Deep Dive', 'REST API Design', 'SQL & NoSQL DBs', 'Auth & Security', 'Cloud Deployment']
     },
     {
@@ -71,7 +71,7 @@ const courses = [
         originalPrice: '10,000',
         perClass: '200',
         category: 'systemdesign',
-        image: '/images/course1.jpg',
+        image: '/images/course_sd.png',
         curriculum: ['Scalability Basics', 'Load Balancing', 'Caching Strategies', 'Distributed Systems', 'Case Studies (Twitter, Uber)']
     },
     {
@@ -88,7 +88,7 @@ const courses = [
         originalPrice: '11,000',
         perClass: '180',
         category: 'development',
-        image: '/images/course2.jpg',
+        image: '/images/course_mern.png',
         curriculum: ['MongoDB & Mongoose', 'Express.js', 'React.js', 'Node.js APIs', 'Full App Deployment']
     },
     {
@@ -105,7 +105,7 @@ const courses = [
         originalPrice: '14,000',
         perClass: '210',
         category: 'development',
-        image: '/images/course3.jpg',
+        image: '/images/course_enterprise.png',
         curriculum: ['Core Java & OOP', 'Spring Boot', 'Hibernate & JPA', 'React Frontend', 'Microservices']
     },
     {
@@ -122,7 +122,7 @@ const courses = [
         originalPrice: '8,000',
         perClass: '90',
         category: 'dsa',
-        image: '/images/course1.jpg',
+        image: '/images/course_dsa.png',
         curriculum: ['Arrays & Strings', 'Trees & Graphs', 'Dynamic Programming', 'Sorting & Searching', '200+ Practice Problems']
     },
     {
@@ -139,7 +139,7 @@ const courses = [
         originalPrice: '9,999',
         perClass: '110',
         category: 'development',
-        image: '/images/course2.jpg',
+        image: '/images/course_android.png',
         curriculum: ['Kotlin Fundamentals', 'Jetpack Compose UI', 'Room DB & Local Storage', 'Retrofit API Calls', 'Publishing to Play Store']
     }
 ];

@@ -10,7 +10,7 @@ const courseData = {
         modules: 14,
         rating: 4.9,
         students: '2,400+',
-        image: '/images/course1.jpg',
+        image: '/images/course_ai.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Real-World Projects', 'Placement Assistance', 'Certificate of Completion'],
         syllabus: [
             {
@@ -114,7 +114,7 @@ const courseData = {
         modules: 12,
         rating: 4.8,
         students: '3,100+',
-        image: '/images/course2.jpg',
+        image: '/images/course_genai.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Hands-On AI Projects', 'Industry Certificate', 'Community Access'],
         syllabus: [
             {
@@ -208,7 +208,7 @@ const courseData = {
         modules: 12,
         rating: 4.7,
         students: '1,800+',
-        image: '/images/course3.jpg',
+        image: '/images/course_backend.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'API Projects', 'Deployment Training', 'Certificate of Completion'],
         syllabus: [
             {
@@ -302,7 +302,7 @@ const courseData = {
         modules: 10,
         rating: 4.9,
         students: '1,200+',
-        image: '/images/course1.jpg',
+        image: '/images/course_sd.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Case Studies', 'Interview Prep', 'Certificate of Completion'],
         syllabus: [
             {
@@ -386,7 +386,7 @@ const courseData = {
         modules: 12,
         rating: 4.8,
         students: '2,800+',
-        image: '/images/course2.jpg',
+        image: '/images/course_mern.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Full-Stack Projects', 'Job Assistance', 'Certificate of Completion'],
         syllabus: [
             {
@@ -480,7 +480,7 @@ const courseData = {
         modules: 14,
         rating: 4.8,
         students: '1,900+',
-        image: '/images/course3.jpg',
+        image: '/images/course_enterprise.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Enterprise Projects', 'Placement Support', 'Certificate of Completion'],
         syllabus: [
             {
@@ -584,7 +584,7 @@ const courseData = {
         modules: 12,
         rating: 4.9,
         students: '3,500+',
-        image: '/images/course1.jpg',
+        image: '/images/course_dsa.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', '500+ Problems', 'Mock Interviews', 'Certificate of Completion'],
         syllabus: [
             {
@@ -678,7 +678,7 @@ const courseData = {
         modules: 12,
         rating: 4.8,
         students: '2,200+',
-        image: '/images/course2.jpg',
+        image: '/images/course_ds.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Real Datasets & Projects', 'Placement Assistance', 'Certificate of Completion'],
         syllabus: [
             {
@@ -772,7 +772,7 @@ const courseData = {
         modules: 10,
         rating: 4.7,
         students: '2,600+',
-        image: '/images/course3.jpg',
+        image: '/images/course_web.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Industry Case Studies', 'Job Assistance', 'Certificate of Completion'],
         syllabus: [
             {
@@ -856,7 +856,7 @@ const courseData = {
         modules: 10,
         rating: 4.8,
         students: '1,500+',
-        image: '/images/course1.jpg',
+        image: '/images/course_enterprise.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Visual & Intuitive Learning', 'Practice Problem Sets', 'Certificate of Completion'],
         syllabus: [
             {
@@ -931,7 +931,7 @@ const courseData = {
         modules: 10,
         rating: 4.7,
         students: '900+',
-        image: '/images/course2.jpg',
+        image: '/images/course_ai.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Simulation Projects', 'Scientific Computing', 'Certificate of Completion'],
         syllabus: [
             {
@@ -1006,7 +1006,7 @@ const courseData = {
         modules: 12,
         rating: 4.8,
         students: '1,200+',
-        image: '/images/course2.jpg',
+        image: '/images/course_android.png',
         highlights: ['Live Interactive Classes', '1:1 Mentorship Sessions', 'Native App Projects', 'Publish to Play Store', 'Certificate of Completion'],
         syllabus: [
             {

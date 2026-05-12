@@ -35,62 +35,13 @@ const tutors = [
         portfolio: '#'
     },
     {
-
         name: 'Shruti Grover',
         experience: '6',
         company: 'Microsoft',
         img: '/images/shruti.jpg',
         bgPosition: 'center 15%',
         blendMode: 'normal'
-    },
-    {
-        name: 'Fella Rahmah Putri',
-        rating: '5.0',
-        ratingCount: '748',
-        experience: '4',
-        subjects: 'Child Engagement, FINANCE-BASIC, FINANCE-INTERMEDIATE',
-        location: 'Indonesia',
-        flag: '🇮🇩',
-        desc: 'I completed my studies with strong academic results and have had the opportunity to gain v...',
-        img: '/images/hero1.jpg',
-        bgColor: '#b2a7eb'
-    },
-    {
-        name: 'Benard Santoso',
-        rating: '5.0',
-        ratingCount: '7176',
-        experience: '3',
-        subjects: 'Child Engagement, HTML-CSS, JAVASCRIPT, PYTHON, SQL',
-        location: 'Indonesia',
-        flag: '🇮🇩',
-        desc: 'Passionate and detail oriented individual with a strong background of programming and teac...',
-        img: '/images/hero2.jpg',
-        bgColor: '#35e2df'
-    },
-    {
-        name: 'Ola Abo Elsaadat',
-        rating: '5.0',
-        ratingCount: '1271',
-        experience: '4',
-        subjects: 'FINANCE-BASIC',
-        location: 'Egypt',
-        flag: '🇪🇬',
-        desc: 'I am Teacher Ola Abu Al-Saadat, I worked as an English language, mathematics and a money m...',
-        img: '/images/hero3.jpg',
-        bgColor: '#f38b88'
-    },
-    {
-        name: 'Jaya Kapoor',
-        rating: '5.0',
-        ratingCount: '1254',
-        experience: '3',
-        subjects: 'FINANCE-BASIC, FINANCE-INTERMEDIATE',
-        location: 'India',
-        flag: '🇮🇳',
-        desc: 'An Educationalist with 22 years of experience in teaching, mentoring, managing teachers an...',
-        img: '/images/hero1.jpg',
-        bgColor: '#ffde31'
-    },
+    }
 ];
 
 export default function Instructors() {

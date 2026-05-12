@@ -7,21 +7,21 @@ const sampleCourses = [
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         price: '$67.9',
         rating: '★★★★★',
-        image: '/images/course1.jpg'
+        image: '/images/course_ai.png'
     },
     {
         title: 'The Complete AI-Powered Copywriting Course',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         price: '$67.9',
         rating: '★★★★★',
-        image: '/images/course2.jpg'
+        image: '/images/course_web.png'
     },
     {
         title: 'The Complete AI-Powered Copywriting Course',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         price: '$67.9',
         rating: '★★★★★',
-        image: '/images/course3.jpg'
+        image: '/images/course_backend.png'
     },
 ];
 
@@ -34,7 +34,7 @@ export default function GenericCourseGrid({ title = "Trending Courses", courses 
                     {courses.map((course, i) => (
                         <div key={i} className={styles.card}>
                             <div className={styles.cardImage} style={{position: 'relative', width: '100%', height: '180px'}}>
-                                <Image src={course.image || `/images/course1.jpg`} alt={course.title} fill style={{objectFit: 'cover'}} />
+                                <Image src={course.image || `/images/course_ai.png`} alt={course.title} fill style={{objectFit: 'cover'}} />
                             </div>
                             <div className={styles.cardMeta}>
                                 <span>15 topics</span>
