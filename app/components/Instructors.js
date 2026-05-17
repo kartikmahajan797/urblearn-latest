@@ -4,6 +4,16 @@ import { FaLinkedin, FaTwitter, FaLink } from 'react-icons/fa';
 import styles from './Instructors.module.css';
 
 const tutors = [
+
+    {
+        name: 'Shruti Grover',
+        experience: '6',
+        company: 'Microsoft',
+        img: '/images/shruti.jpg',
+        bgPosition: 'center 15%',
+        blendMode: 'normal'
+
+    },
     {
         name: 'Ayush',
         experience: '5',
@@ -34,14 +44,7 @@ const tutors = [
         twitter: '#',
         portfolio: '#'
     },
-    {
-        name: 'Shruti Grover',
-        experience: '6',
-        company: 'Microsoft',
-        img: '/images/shruti.jpg',
-        bgPosition: 'center 15%',
-        blendMode: 'normal'
-    }
+
 ];
 
 export default function Instructors() {

@@ -1,96 +1,169 @@
 .howItWorks {
-    padding: 80px 0;
-    background: var(--bg-white);
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--bg-white) 0%, #f9f9ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .howItWorksHeader {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
+}
+
+.topTag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    display: block;
 }
 
 .howItWorksHeader h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
+    font-size: 2.8rem;
+    font-weight: 800;
     color: var(--text-dark);
+    margin-bottom: 16px;
 }
 
 .howItWorksHeader h2 span {
     color: var(--primary);
 }
 
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+}
+
+.stepsWrapper {
+    position: relative;
+    padding-top: 20px;
+}
+
+.connectingLine {
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-light), var(--primary), var(--primary-light), transparent);
+    z-index: 0;
+    border-radius: 4px;
+}
+
 .stepsGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    position: relative;
-}
-
-.stepsGrid::before {
-    content: '';
-    position: absolute;
-    top: 48px;
-    left: 15%;
-    right: 15%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--primary-light), var(--primary), var(--primary-light), transparent);
-    z-index: 0;
-}
-
-.step {
-    text-align: center;
+    gap: 30px;
     position: relative;
     z-index: 1;
 }
 
-.stepIcon {
+.stepCard {
+    background: white;
+    padding: 40px 24px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    border: 1px solid var(--border-light);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.stepCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(136, 97, 255, 0.1);
+    border-color: rgba(136, 97, 255, 0.3);
+}
+
+.iconContainer {
+    position: relative;
     width: 80px;
     height: 80px;
+    margin: 0 auto 30px;
+}
+
+.stepIcon {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background: linear-gradient(135deg, #f0ecff, #e0d4ff);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 16px;
     font-size: 2rem;
-    transition: all 0.3s;
-    border: 3px solid white;
-    box-shadow: var(--shadow-md);
+    color: var(--primary);
+    transition: all 0.4s ease;
+    border: 4px solid white;
+    box-shadow: 0 10px 20px rgba(136, 97, 255, 0.15);
+    position: relative;
+    z-index: 2;
 }
 
-.step:hover .stepIcon {
+.stepCard:hover .stepIcon {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    transform: scale(1.1);
+    color: white;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.stepNumberWrapper {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 36px;
+    height: 36px;
+    background: var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.stepCard:hover .stepNumberWrapper {
+    background: var(--primary);
 }
 
 .stepNumber {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: white;
 }
 
 .stepTitle {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 800;
     color: var(--text-dark);
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .stepDesc {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     color: var(--text-medium);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .stepsGrid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
     }
-
-    .stepsGrid::before {
+    .connectingLine {
         display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .stepsGrid {
+        grid-template-columns: 1fr;
     }
 }

@@ -96,35 +96,34 @@
     opacity: 1;
 }
 
-.socialIcons {
+.hoverInfo {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 12px;
     transform: translateY(20px);
     transition: transform 0.4s ease;
+    text-align: center;
 }
 
-.card:hover .socialIcons {
+.card:hover .hoverInfo {
     transform: translateY(0);
 }
 
-.socialIcon {
-    width: 40px;
-    height: 40px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
+.hoverPosition {
     font-size: 1.2rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-weight: 700;
+    color: white;
 }
 
-.socialIcon:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-5px);
+.hoverCompany {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .content {

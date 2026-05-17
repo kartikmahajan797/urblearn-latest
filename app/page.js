@@ -22,10 +22,10 @@ export default function Home() {
             <Navbar />
             <Hero />
             <PartnerLogos />
-            
 
 
-             {/* How we deliver value / Features */}
+
+            {/* How we deliver value / Features */}
             <HowItWorks />
             <Personalized />
             <Experience />
@@ -34,24 +34,24 @@ export default function Home() {
             <EngineerJourney />
             <PlacementSlider />
             <Comparison />
-            
+
             {/* Our Offerings */}
             <Courses />
-            <SkillsForSuccess />
-            
+            {/* <SkillsForSuccess /> */}
+
             {/* How we deliver value / Features
             <HowItWorks />
             <Personalized />
             <Experience /> */}
-            
+
             {/* Social Proof & Authority */}
             <Instructors />
             <StudentFeedback />
-            
+
             {/* Closing Objections & CTA */}
             <FAQ />
             <LeadFormSection />
-            
+
             <Footer />
         </>
     );

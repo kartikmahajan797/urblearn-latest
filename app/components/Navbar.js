@@ -44,16 +44,16 @@ export default function Navbar() {
                     <a href="/kids-program" onClick={() => setIsOpen(false)}>Kids Program</a>
                     <a href="/#courses" onClick={() => setIsOpen(false)}>Courses</a>
                     {/* Mobile-only CTA */}
-                    <div className={styles.mobileActions}>
+                    {/* <div className={styles.mobileActions}>
                         <button className={styles.loginBtn} onClick={() => setIsOpen(false)}>Log In</button>
                         <button className={styles.signupBtn} onClick={() => setIsOpen(false)}>Sign Up Free</button>
-                    </div>
+                    </div> */}
                 </div>
 
-                <div className={styles.navActions}>
+                {/* <div className={styles.navActions}>
                     <button className={styles.loginBtn}>Log In</button>
                     <button className={styles.signupBtn}>Sign Up Free</button>
-                </div>
+                </div> */}
 
                 <button
                     className={`${styles.hamburger} ${isOpen ? styles.hamburgerActive : ''}`}
